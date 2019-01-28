@@ -1,0 +1,1 @@
+[28-Jan-2019 08:36:30 UTC] PHP Fatal error:  Cannot declare class App\Controller\AleaController, because the name is already in use in /home/ubuntu/workspace/symfony/src/Controller/LuckyController.php on line 7
