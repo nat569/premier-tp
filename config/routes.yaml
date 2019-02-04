@@ -6,7 +6,7 @@
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
 
 app_lucky_number:
-    path: /toto
+    path: /toto/{name}-{nameFamily}
     controller: App\Controller\AleaController::number
     
 #Dans le dossier controlleur, le fichier controlleir doit avoir le même nom

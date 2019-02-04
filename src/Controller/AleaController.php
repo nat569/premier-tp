@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AleaController extends Controller
 {
-    public function number()
+    public function number($name, $nameFamily)
     {
         
         $number = 0;
@@ -31,6 +31,8 @@ class AleaController extends Controller
 
         return $this->render('alea/toto.html.twig',[
             'number' => $number,
+            'name' => $name,
+            'nameFamily' => $nameFamily,
             ]);
     }
 }
