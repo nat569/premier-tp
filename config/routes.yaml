@@ -8,7 +8,22 @@
 app_lucky_number:
     path: /toto/{name}-{nameFamily}
     controller: App\Controller\AleaController::number
+
+app_create_formation:
+    path: /toto/create/formation
+    controller: App\Controller\FormationController::sauvegarder
     
+app_create_experience:
+    path: /toto/create/experience
+    controller: App\Controller\ExperienceController::sauvegarder
+    
+app_create_loisir:
+    path: /toto/create/loisir
+    controller: App\Controller\LoisirController::sauvegarder
+
+    
+#::sauvegarder = nom de la méthode defini dans le controller
+
 #Dans le dossier controlleur, le fichier controlleir doit avoir le même nom
 #que celui de sa classe ainsi que dans cette page. ici le nom est aleaControlleur
 #Le nom du controlleur il doit se terminer par Controlleur

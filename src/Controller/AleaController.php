@@ -6,6 +6,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use App\Entity\Formation;
+
+use App\Entity\Experience;
+
+use App\Entity\Loisir;
+
 
 class AleaController extends Controller
 {
@@ -28,11 +34,20 @@ class AleaController extends Controller
         */
         }
         
+        $formations = $this->getDoctrine()->getManager()->getRepository(Formation::class)->findAllFormations();
+        $experiences = $this->getDoctrine()->getManager()->getRepository(Experience::class)->findAllExperiences();
+        $loisirs = $this->getDoctrine()->getManager()->getRepository(Loisir::class)->findAllLoisirs();
+
+
 
         return $this->render('alea/toto.html.twig',[
             'number' => $number,
             'name' => $name,
             'nameFamily' => $nameFamily,
+            'formations' => $formations,
+            'experiences' => $experiences,
+            'loisirs' => $loisirs,
+            
             ]);
     }
 }

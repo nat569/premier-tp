@@ -97,7 +97,54 @@ ici  return $this->render('alea/toto.html.twig', -->
 			<div class="clear"></div>
 		</section>
 		
+		<!-- Section Formations-->
+		<section>
+			<div class="sectionTitle">
+				<h1>Formations</h1>
+			</div>
+			
+			<div class="sectionContent">
+			    
+			    <ul>
+	            {% for formation in formations %}
+	                <li>
+			            <article>
+					        <h2>{{ formation.getName () }}</h2>
+					        <p class="subDetails">{{ formation.getdebut () }} - {{ formation.getfin () }}</p>
+					        <p>{{ formation.getContenu () }}</p>
+				        </article>
+	                </li>
+	            {% endfor %}
+			     </ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+	<section>
 		
+		
+				<!-- Section Experiences-->
+		<section>
+			<div class="sectionTitle">
+				<h1>Experiences</h1>
+			</div>
+			
+			<div class="sectionContent">
+			    
+			    <ul>
+	            {% for experience in experiences %}
+	                <li>
+			            <article>
+					        <h2>{{ experience.getName () }}</h2>
+					        <p class="subDetails">{{ experience.getDebut() |date('d-m-y') }} - {{ experience.getFin() |date('d-m-y') }}</p>
+					        <p>{{ experience.getDomaine() }}</p>
+					        <p>{{ experience.getEntreprise()}}</p>
+				        </article>
+	                </li>
+	            {% endfor %}
+			     </ul>
+			</div>
+			<div class="clear"></div>
+		</section>
 		<section>
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
