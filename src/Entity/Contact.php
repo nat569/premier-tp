@@ -7,10 +7,9 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource
- * @ORM\Entity(repositoryClass="App\Repository\LoisirRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
  */
-class Loisir
+class Contact
 {
     /**
      * @ORM\Id()
@@ -21,21 +20,18 @@ class Loisir
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
      */
-    private $category;
+    private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer")
      */
-    private $competencesQueCaTApportes;
+    private $numeroTelephone;
 
     public function getId(): ?int
     {
@@ -54,26 +50,26 @@ class Loisir
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getEmail(): ?string
     {
-        return $this->category;
+        return $this->email;
     }
 
-    public function setCategory(string $category): self
+    public function setEmail(string $email): self
     {
-        $this->category = $category;
+        $this->email = $email;
 
         return $this;
     }
 
-    public function getCompetencesQueCaTApportes(): ?string
+    public function getNumeroTelephone(): ?int
     {
-        return $this->competencesQueCaTApportes;
+        return $this->numeroTelephone;
     }
 
-    public function setCompetencesQueCaTApportes(string $competencesQueCaTApportes): self
+    public function setNumeroTelephone(int $numeroTelephone): self
     {
-        $this->competencesQueCaTApportes = $competencesQueCaTApportes;
+        $this->numeroTelephone = $numeroTelephone;
 
         return $this;
     }

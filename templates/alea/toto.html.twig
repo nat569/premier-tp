@@ -104,7 +104,6 @@ ici  return $this->render('alea/toto.html.twig', -->
 			</div>
 			
 			<div class="sectionContent">
-			    
 			    <ul>
 	            {% for formation in formations %}
 	                <li>
@@ -168,6 +167,32 @@ ici  return $this->render('alea/toto.html.twig', -->
 			</div>
 			<div class="clear"></div>
 		</section>
+		
+		<!--Section Contacts -->
+		
+			<section>
+			<div class="sectionTitle">
+				<h1>Contacts</h1>
+			</div>
+			<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target ="_blank">Gerer les contacts</a>
+			<div class="sectionContent">
+			    
+			    <ul>
+	            {% for contact in contacts %}
+	                <li>
+			            <article>
+					        <h2>{{ contact.getName () }}</h2>
+					        <p>{{ contact.getEmail() }}</p>
+					        <p>{{ contact.getNumeroTelephone()}}</p>
+				        </article>
+	                </li>
+	            {% endfor %}
+			     </ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
 		
 		
 		<section>

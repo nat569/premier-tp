@@ -12,6 +12,8 @@ use App\Entity\Experience;
 
 use App\Entity\Loisir;
 
+use App\Entity\Contact;
+
 
 class AleaController extends Controller
 {
@@ -37,6 +39,7 @@ class AleaController extends Controller
         $formations = $this->getDoctrine()->getManager()->getRepository(Formation::class)->findAllFormations();
         $experiences = $this->getDoctrine()->getManager()->getRepository(Experience::class)->findAllExperiences();
         $loisirs = $this->getDoctrine()->getManager()->getRepository(Loisir::class)->findAllLoisirs();
+        $contacts = $this->getDoctrine()->getManager()->getRepository(Contact::class)->findAllContacts();
 
 
 
@@ -47,6 +50,7 @@ class AleaController extends Controller
             'formations' => $formations,
             'experiences' => $experiences,
             'loisirs' => $loisirs,
+            'contacts' => $contacts,
             
             ]);
     }
