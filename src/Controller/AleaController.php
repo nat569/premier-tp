@@ -15,7 +15,7 @@ use App\Entity\Loisir;
 
 class AleaController extends Controller
 {
-    public function number($name, $nameFamily)
+    public function number()
     {
         
         $number = 0;
@@ -42,8 +42,8 @@ class AleaController extends Controller
 
         return $this->render('alea/toto.html.twig',[
             'number' => $number,
-            'name' => $name,
-            'nameFamily' => $nameFamily,
+            'name' => ',jnjn',
+            'nameFamily' => 'gvfft',
             'formations' => $formations,
             'experiences' => $experiences,
             'loisirs' => $loisirs,

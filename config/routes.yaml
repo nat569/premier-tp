@@ -6,20 +6,61 @@
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
 
 app_lucky_number:
-    path: /toto/{name}-{nameFamily}
+    path: /toto
     controller: App\Controller\AleaController::number
 
+
+
 app_create_formation:
-    path: /toto/create/formation
+    path: /toto/save/formation
     controller: App\Controller\FormationController::sauvegarder
     
+app_create_formationType:
+    path: /toto/create/formation
+    controller: App\Controller\FormationController::create
+
+valid_formation:
+    path: /toto/valid/formation
+    controller: App\Controller\FormationController::valid
+    
+edit_formation:
+    path: /toto/edit/formation/{id}
+    controller: App\Controller\FormationController::edit
+    
+
 app_create_experience:
-    path: /toto/create/experience
+    path: /toto/save/experience
     controller: App\Controller\ExperienceController::sauvegarder
     
+app_create_experienceType:
+    path: /toto/create/experience
+    controller: App\Controller\ExperienceController::create
+
+valid_experience:
+    path: /toto/valid/experience
+    controller: App\Controller\ExperienceController::valid
+    
+edit_experience:
+    path: /toto/edit/experience/{id}
+    controller: App\Controller\ExperienceController::edit
+    
+    
+    
 app_create_loisir:
-    path: /toto/create/loisir
+    path: /toto/save/loisir
     controller: App\Controller\LoisirController::sauvegarder
+
+app_create_loisirType:
+    path: /toto/create/loisir
+    controller: App\Controller\LoisirController::create
+
+valid_loisir:
+    path: /toto/valid/loisir
+    controller: App\Controller\LoisirController::valid
+    
+edit_loisir:
+    path: /toto/edit/loisir/{id}
+    controller: App\Controller\LoisirController::edit
 
     
 #::sauvegarder = nom de la méthode defini dans le controller

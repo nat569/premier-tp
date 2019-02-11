@@ -145,6 +145,31 @@ ici  return $this->render('alea/toto.html.twig', -->
 			</div>
 			<div class="clear"></div>
 		</section>
+		
+		<!-- Loisir -->
+		<section>
+			<div class="sectionTitle">
+				<h1>Loisirs</h1>
+			</div>
+			
+			<div class="sectionContent">
+			    
+			    <ul>
+	            {% for loisir in loisirs %}
+	                <li>
+			            <article>
+					        <h2>{{ loisir.getName () }}</h2>
+					        <p>{{ loisir.getCategory() }}</p>
+					        <p>{{ loisir.getCompetencesQueCaTApportes()}}</p>
+				        </article>
+	                </li>
+	            {% endfor %}
+			     </ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
 		<section>
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
