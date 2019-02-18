@@ -79,7 +79,6 @@ class ExperienceController extends Controller // Doit finir par controler
         $entityManager = $this->getDoctrine()->getManager();
         $experience = $entityManager->getRepository(Experience::class)->findOneBy(['id' => $id]);
         $form = $this->createForm(ExperienceType::class, $experience);
-        
         return $this->render('experience/create.html.twig', [
             'entity' => $experience,
             'form' => $form->createView(),
@@ -88,25 +87,22 @@ class ExperienceController extends Controller // Doit finir par controler
     }
 
 
-    public function delete(Request $request, Experience $experience)
+    public function delete($id)
     {
         
-        if ($this->isCsrfTokenValid('delete'.$experience->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
-            
-            ///////
+            $experience = $entityManager->getRepository(Experience::class)->findOneBy(['id' => $id]);
             if ($experience) {
-            ///////
+                $entityManager->remove($experience);
+                $entityManager->flush();
             
-            $entityManager->remove($experience);
-            $entityManager->flush();
-        
-
-            return $this->redirectToRoute('experience_index');
-        }else{
-            return $this->redirectToRoute('experience_index');
-             }
-        }
+    
+                return $this->redirectToRoute('app_lucky_number');
+            } else{
+                return new Response(
+            '<html><body>hipper, arrete de chipper !</body></html>'
+        );
+            }
     }
     
     

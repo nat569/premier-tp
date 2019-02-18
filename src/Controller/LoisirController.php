@@ -79,6 +79,24 @@ class LoisirController extends Controller // Doit finir par controler
             ]
         );
     }
+    
+        public function delete($id)
+    {
+        
+            $entityManager = $this->getDoctrine()->getManager();
+            $loisir = $entityManager->getRepository(Loisir::class)->findOneBy(['id' => $id]);
+            if ($loisir) {
+                $entityManager->remove($loisir);
+                $entityManager->flush();
+            
+    
+                return $this->redirectToRoute('app_lucky_number');
+            } else{
+                return new Response(
+            '<html><body>Oh non! ce loisir n existe pas !</body></html>'
+        );
+            }
+    }
 }
 
 

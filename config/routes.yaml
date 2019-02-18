@@ -27,6 +27,10 @@ edit_formation:
     path: /toto/edit/formation/{id}
     controller: App\Controller\FormationController::edit
     
+delete_formation:
+    path: /toto/delete/formation/{id}
+    controller: App\Controller\FormationController::delete
+    
 
 
 app_create_experience:
@@ -46,7 +50,7 @@ edit_experience:
     controller: App\Controller\ExperienceController::edit
     
 delete_experience:
-    path: /toto/delete/experience
+    path: /toto/delete/experience/{id}
     controller: App\Controller\ExperienceController::delete
     
     
@@ -66,6 +70,10 @@ valid_loisir:
 edit_loisir:
     path: /toto/edit/loisir/{id}
     controller: App\Controller\LoisirController::edit
+    
+delete_loisir:
+    path: /toto/delete/loisir/{id}
+    controller: App\Controller\LoisirController::delete
 
     
 #::sauvegarder = nom de la méthode defini dans le controller

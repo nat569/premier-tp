@@ -40,7 +40,6 @@ class Experience
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Type("\DateTime")
      * @Assert\NotBlank
      */
     private $entreprise;

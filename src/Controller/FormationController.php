@@ -83,6 +83,24 @@ class FormationController extends Controller // Doit finir par controler
             ]
         );
     }
+    
+    public function delete($id)
+    {
+        
+            $entityManager = $this->getDoctrine()->getManager();
+            $formation = $entityManager->getRepository(Formation::class)->findOneBy(['id' => $id]);
+            if ($formation) {
+                $entityManager->remove($formation);
+                $entityManager->flush();
+            
+    
+                return $this->redirectToRoute('app_lucky_number');
+            } else{
+                return new Response(
+            '<html><body>nani ?</body></html>'
+        );
+            }
+    }
 }
 
 
