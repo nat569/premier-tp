@@ -101,7 +101,9 @@ ici  return $this->render('alea/toto.html.twig', -->
 		<section>
 			<div class="sectionTitle">
 				<h1>Formations</h1><br/>
-				<a href="{{ path('app_create_formationType') }}" >New</a>
+				{% if is_granted('ROLE_ADMIN') %}
+					<a href="{{ path('app_create_formationType') }}" >New</a>
+				{% endif %}
 			</div>
 			
 			<div class="sectionContent">
@@ -112,8 +114,10 @@ ici  return $this->render('alea/toto.html.twig', -->
 					        <h2>{{ formation.getName () }}</h2>
 					        <p class="subDetails">{{ formation.getdebut () }} - {{ formation.getfin () }}</p>
 					        <p>{{ formation.getContenu () }}</p>
-							<a href="{{ path('edit_formation', {id:formation.getId()}) }}" >edit</a>
-							<a href="{{ path('delete_formation', {id:formation.getId()}) }}" >delete</a>					        
+					        {% if is_granted('ROLE_ADMIN') %}
+								<a href="{{ path('edit_formation', {id:formation.getId()}) }}" >edit</a>
+								<a href="{{ path('delete_formation', {id:formation.getId()}) }}" >delete</a>	
+							{% endif %}
 				        </article>
 	                </li>
 	            {% endfor %}
@@ -128,7 +132,9 @@ ici  return $this->render('alea/toto.html.twig', -->
 		<section>
 			<div class="sectionTitle">
 				<h1>Experiences</h1><br/>
-				<a href="{{ path('app_create_experienceType') }}" >New</a>
+				{% if is_granted('ROLE_ADMIN') %}
+					<a href="{{ path('app_create_experienceType') }}" >New</a>
+				{% endif %}
 			</div>
 			
 			<div class="sectionContent">
@@ -141,8 +147,10 @@ ici  return $this->render('alea/toto.html.twig', -->
 					        <p class="subDetails">{{ experience.getDebut() |date('d-m-y') }} - {{ experience.getFin() |date('d-m-y') }}</p>
 					        <p>{{ experience.getDomaine() }}</p>
 					        <p>{{ experience.getEntreprise()}}</p>
-							<a href="{{ path('edit_experience', {id:experience.getId()}) }}" >edit</a>
-							<a href="{{ path('delete_experience', {id:experience.getId()}) }}" >delete</a>
+					        {% if is_granted('ROLE_ADMIN') %}
+								<a href="{{ path('edit_experience', {id:experience.getId()}) }}" >edit</a>
+								<a href="{{ path('delete_experience', {id:experience.getId()}) }}" >delete</a>
+							{% endif %}
 				        </article>
 	                </li>
 	            {% endfor %}
@@ -155,7 +163,9 @@ ici  return $this->render('alea/toto.html.twig', -->
 		<section>
 			<div class="sectionTitle">
 				<h1>Loisirs</h1> <br/>
-			    <a href="{{ path('app_create_loisirType') }}" >New</a>
+				{% if is_granted('ROLE_ADMIN') %}
+			    	<a href="{{ path('app_create_loisirType') }}" >New</a>
+			    {% endif %}
 			</div>
 			
 			<div class="sectionContent">
@@ -167,8 +177,10 @@ ici  return $this->render('alea/toto.html.twig', -->
 					        <h2>{{ loisir.getName () }}</h2>
 					        <p>{{ loisir.getCategory() }}</p>
 					        <p>{{ loisir.getCompetencesQueCaTApportes()}}</p>
-							<a href="{{ path('edit_loisir', {id:loisir.getId()}) }}" >edit</a>
-							<a href="{{ path('delete_loisir', {id:loisir.getId()}) }}" >delete</a>
+					        {% if is_granted('ROLE_ADMIN') %}
+								<a href="{{ path('edit_loisir', {id:loisir.getId()}) }}" >edit</a>
+								<a href="{{ path('delete_loisir', {id:loisir.getId()}) }}" >delete</a>
+							{% endif %}
 				        </article>
 	                </li>
 	            {% endfor %}
@@ -182,7 +194,9 @@ ici  return $this->render('alea/toto.html.twig', -->
 			<section>
 			<div class="sectionTitle">
 				<h1>Contacts</h1><br/>
-				<a href="{{ path('contact_new') }}" >New</a>
+				{% if is_granted('ROLE_ADMIN') %}
+					<a href="{{ path('contact_new') }}" >New</a>
+				{% endif %}
 			</div>
 			<!--<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target ="_blank">Gerer les contacts</a>-->
 			
@@ -196,9 +210,11 @@ ici  return $this->render('alea/toto.html.twig', -->
 					        <h2>{{ contact.getName () }}</h2>
 					        <p>{{ contact.getEmail() }}</p>
 					        <p>{{ contact.getNumeroTelephone()}}</p>
-							<a href="{{ path('contact_show', {id:contact.getId()}) }}" >show</a>
-							<a href="{{ path('contact_edit', {id:contact.getId()}) }}" >edit</a>
-							<a href="{{ path('contact_delete', {id:contact.getId()}) }}" >delete</a>
+					        {% if is_granted('ROLE_ADMIN') %}
+								<a href="{{ path('contact_show', {id:contact.getId()}) }}" >show</a>
+								<a href="{{ path('contact_edit', {id:contact.getId()}) }}" >edit</a>
+								<a href="{{ path('contact_delete', {id:contact.getId()}) }}" >delete</a>
+							{% endif %}
 							
 				        </article>
 	                </li>

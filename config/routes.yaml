@@ -74,6 +74,11 @@ edit_loisir:
 delete_loisir:
     path: /toto/delete/loisir/{id}
     controller: App\Controller\LoisirController::delete
+    
+    
+ROLE_ADMIN:
+    path: /admin
+    controller: App\Controller\DefaultController::adminAction
 
     
 #::sauvegarder = nom de la méthode defini dans le controller
@@ -81,3 +86,5 @@ delete_loisir:
 #Dans le dossier controlleur, le fichier controlleir doit avoir le même nom
 #que celui de sa classe ainsi que dans cette page. ici le nom est aleaControlleur
 #Le nom du controlleur il doit se terminer par Controlleur
+
+#Besoin du id car passe en parametre dans toto.twig.html
