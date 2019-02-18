@@ -137,6 +137,10 @@ ici  return $this->render('alea/toto.html.twig', -->
 					        <p class="subDetails">{{ experience.getDebut() |date('d-m-y') }} - {{ experience.getFin() |date('d-m-y') }}</p>
 					        <p>{{ experience.getDomaine() }}</p>
 					        <p>{{ experience.getEntreprise()}}</p>
+					        <a href="{{ path('app_create_experienceType') }}" >New</a>
+						<!--	<a href="{{ path('contact_show', {id:experience.getId()}) }}" >show</a>-->
+							<a href="{{ path('edit_experience', {id:experience.getId()}) }}" >edit</a>
+							<a href="{{ path('delete_experience', {id:experience.getId()}) }}" >delete</a>
 				        </article>
 	                </li>
 	            {% endfor %}
@@ -174,16 +178,23 @@ ici  return $this->render('alea/toto.html.twig', -->
 			<div class="sectionTitle">
 				<h1>Contacts</h1>
 			</div>
-			<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target ="_blank">Gerer les contacts</a>
+			<!--<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target ="_blank">Gerer les contacts</a>-->
+			
 			<div class="sectionContent">
 			    
 			    <ul>
 	            {% for contact in contacts %}
 	                <li>
 			            <article>
+			            
 					        <h2>{{ contact.getName () }}</h2>
 					        <p>{{ contact.getEmail() }}</p>
 					        <p>{{ contact.getNumeroTelephone()}}</p>
+					        <a href="{{ path('contact_new') }}" >New</a>
+							<a href="{{ path('contact_show', {id:contact.getId()}) }}" >show</a>
+							<a href="{{ path('contact_edit', {id:contact.getId()}) }}" >edit</a>
+							<a href="{{ path('contact_delete', {id:contact.getId()}) }}" >delete</a>
+							
 				        </article>
 	                </li>
 	            {% endfor %}

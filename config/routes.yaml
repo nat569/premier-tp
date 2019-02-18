@@ -45,6 +45,10 @@ edit_experience:
     path: /toto/edit/experience/{id}
     controller: App\Controller\ExperienceController::edit
     
+delete_experience:
+    path: /toto/delete/experience
+    controller: App\Controller\ExperienceController::delete
+    
     
     
 app_create_loisir:

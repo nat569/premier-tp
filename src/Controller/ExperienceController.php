@@ -87,6 +87,27 @@ class ExperienceController extends Controller // Doit finir par controler
         );
     }
 
+
+    public function delete(Request $request, Experience $experience)
+    {
+        
+        if ($this->isCsrfTokenValid('delete'.$experience->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            
+            ///////
+            if ($experience) {
+            ///////
+            
+            $entityManager->remove($experience);
+            $entityManager->flush();
+        
+
+            return $this->redirectToRoute('experience_index');
+        }else{
+            return $this->redirectToRoute('experience_index');
+             }
+        }
+    }
     
     
 }
