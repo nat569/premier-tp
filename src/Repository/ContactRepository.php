@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\Contact;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-use Doctrine\ORM\EntityRepository;
 
 /**
  * @method Contact|null find($id, $lockMode = null, $lockVersion = null)
@@ -48,19 +47,18 @@ class ContactRepository extends ServiceEntityRepository
         ;
     }
     */
-    
-    
-     public function findAllContacts()
+
+    public function findAllContacts()
     {
-        $qBuilder=$this
+        $qBuilder = $this
             ->getEntityManager()
             ->createQueryBuilder();
-            
+
         $qBuilder->select('f');
-        $qBuilder->from('App:Contact','f');
-        
-        $result=$qBuilder->getQuery()->getResult();
-        
+        $qBuilder->from('App:Contact', 'f');
+
+        $result = $qBuilder->getQuery()->getResult();
+
         return $result;
     }
 }

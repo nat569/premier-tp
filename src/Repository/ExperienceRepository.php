@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\Experience;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-use Doctrine\ORM\EntityRepository;
 
 /**
  * @method Experience|null find($id, $lockMode = null, $lockVersion = null)
@@ -48,19 +47,18 @@ class ExperienceRepository extends ServiceEntityRepository
         ;
     }
     */
-    
-    
- public function findAllExperiences()
+
+    public function findAllExperiences()
     {
-        $qBuilder=$this
+        $qBuilder = $this
             ->getEntityManager()
             ->createQueryBuilder();
-            
+
         $qBuilder->select('f');
-        $qBuilder->from('App:Experience','f');
-        
-        $result=$qBuilder->getQuery()->getResult();
-        
+        $qBuilder->from('App:Experience', 'f');
+
+        $result = $qBuilder->getQuery()->getResult();
+
         return $result;
     }
 }

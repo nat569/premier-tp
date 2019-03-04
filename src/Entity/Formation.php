@@ -81,7 +81,6 @@ class Formation
         $this->fin = $fin;
 
         return $this;
-        
     }
 
     public function getContenu(): ?string
@@ -95,5 +94,4 @@ class Formation
 
         return $this;
     }
-    
 }

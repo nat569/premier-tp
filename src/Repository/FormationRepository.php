@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\Formation;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-use Doctrine\ORM\EntityRepository;
 
 /**
  * @method Formation|null find($id, $lockMode = null, $lockVersion = null)
@@ -48,18 +47,18 @@ class FormationRepository extends ServiceEntityRepository
         ;
     }
     */
-    
+
     public function findAllFormations()
     {
-        $qBuilder=$this
+        $qBuilder = $this
             ->getEntityManager()
             ->createQueryBuilder();
-            
+
         $qBuilder->select('f');
-        $qBuilder->from('App:Formation','f');
-        
-        $result=$qBuilder->getQuery()->getResult();
-        
+        $qBuilder->from('App:Formation', 'f');
+
+        $result = $qBuilder->getQuery()->getResult();
+
         return $result;
     }
 }

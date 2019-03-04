@@ -47,18 +47,18 @@ class LoisirRepository extends ServiceEntityRepository
         ;
     }
     */
-    
- public function findAllLoisirs()
+
+    public function findAllLoisirs()
     {
-        $qBuilder=$this
+        $qBuilder = $this
             ->getEntityManager()
             ->createQueryBuilder();
-            
+
         $qBuilder->select('f');
-        $qBuilder->from('App:Loisir','f');
-        
-        $result=$qBuilder->getQuery()->getResult();
-        
+        $qBuilder->from('App:Loisir', 'f');
+
+        $result = $qBuilder->getQuery()->getResult();
+
         return $result;
     }
 }

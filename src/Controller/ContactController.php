@@ -85,24 +85,22 @@ class ContactController extends Controller
      */
     public function delete(Request $request, Contact $contact): Response
     {
-        
         if ($this->isCsrfTokenValid('delete'.$contact->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
-            
+
             ///////
             if ($contact) {
-            ///////
-            
-            $entityManager->remove($contact);
-            $entityManager->flush();
-        
+                ///////
 
-            return $this->redirectToRoute('contact_index');
-        }else{
+                $entityManager->remove($contact);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('contact_index');
+            } else {
                 return new Response(
                     '<html><body>Lucky number: '.$number.'</body></html>'
                 );
-             }
+            }
         }
     }
 }
