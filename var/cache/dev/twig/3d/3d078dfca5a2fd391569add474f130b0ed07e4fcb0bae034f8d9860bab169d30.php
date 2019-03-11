@@ -54,8 +54,8 @@ class __TwigTemplate_7e73f28c2fe44c4beca00fdc5c52996899fb4b675f3cfb449b27f48705d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Contact</h1>
-
+        echo "    <h1>Contact</h1>
+    
     ";
         // line 8
         echo twig_include($this->env, $context, "contact/_form.html.twig");
@@ -93,8 +93,8 @@ class __TwigTemplate_7e73f28c2fe44c4beca00fdc5c52996899fb4b675f3cfb449b27f48705d
 {% block title %}New Contact{% endblock %}
 
 {% block body %}
-    <h1>Create new Contact</h1>
-
+    <h1>Contact</h1>
+    
     {{ include('contact/_form.html.twig') }}
 
     <a href=\"{{ path('contact_index') }}\">back to list</a>

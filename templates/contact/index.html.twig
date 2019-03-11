@@ -20,8 +20,7 @@
             <tr>
                 <td>{{ contact.id }}</td>
                 <td>{{ contact.name }}</td>
-                <td>{{ contact.email }}</td>
-                <td>{{ contact.numeroTelephone }}</td>
+
                 <td>
                     <a href="{{ path('contact_show', {'id': contact.id}) }}">show</a>
                     <a href="{{ path('contact_edit', {'id': contact.id}) }}">edit</a>

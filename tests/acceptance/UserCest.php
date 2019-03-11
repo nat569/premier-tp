@@ -10,5 +10,10 @@ class UserCest
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
+        $I->wantTo('Test my page');
+        $I->amOnPage('/toto');
+        $I->see('Nathan RABADAN');
+        $I->see('job title'); 
+        
     }
 }

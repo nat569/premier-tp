@@ -6,3 +6,4 @@
 [11-Feb-2019 07:30:28 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/symfony/src/Entity/Experience.php on line 4
 [11-Feb-2019 07:30:30 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/symfony/src/Entity/Experience.php on line 4
 [04-Mar-2019 10:19:15 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ubuntu/workspace/symfony/var/cache/dev/ContainerQclrfkg/srcDevDebugProjectContainer.php on line 19
+[11-Mar-2019 10:26:00 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/ubuntu/workspace/symfony/vendor/symfony/twig-bridge/Extension/CodeExtension.php on line 145

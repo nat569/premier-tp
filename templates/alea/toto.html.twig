@@ -194,31 +194,15 @@ ici  return $this->render('alea/toto.html.twig', -->
 			<section>
 			<div class="sectionTitle">
 				<h1>Contacts</h1><br/>
-				{% if is_granted('ROLE_ADMIN') %}
-					<a href="{{ path('contact_new') }}" >New</a>
-				{% endif %}
 			</div>
 			<!--<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target ="_blank">Gerer les contacts</a>-->
 			
 			<div class="sectionContent">
 			    
 			    <ul>
-	            {% for contact in contacts %}
-	                <li>
-			            <article>
-			            
-					        <h2>{{ contact.getName () }}</h2>
-					        <p>{{ contact.getEmail() }}</p>
-					        <p>{{ contact.getNumeroTelephone()}}</p>
-					        {% if is_granted('ROLE_ADMIN') %}
-								<a href="{{ path('contact_show', {id:contact.getId()}) }}" >show</a>
-								<a href="{{ path('contact_edit', {id:contact.getId()}) }}" >edit</a>
-								<a href="{{ path('contact_delete', {id:contact.getId()}) }}" >delete</a>
-							{% endif %}
-							
-				        </article>
-	                </li>
-	            {% endfor %}
+			    	{% if is_granted('ROLE_ADMIN') %}
+					<a href="{{ path('contact_new') }}" >Laisser un message</a>
+				{% endif %}
 			     </ul>
 			</div>
 			<div class="clear"></div>

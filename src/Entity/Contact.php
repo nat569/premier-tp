@@ -24,12 +24,7 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $email;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $numeroTelephone;
+    private $message;
 
     public function getId(): ?int
     {
@@ -48,26 +43,14 @@ class Contact
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getMessage(): ?string
     {
-        return $this->email;
+        return $this->message;
     }
 
-    public function setEmail(string $email): self
+    public function setMessage(string $message): self
     {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    public function getNumeroTelephone(): ?int
-    {
-        return $this->numeroTelephone;
-    }
-
-    public function setNumeroTelephone(int $numeroTelephone): self
-    {
-        $this->numeroTelephone = $numeroTelephone;
+        $this->message = $message;
 
         return $this;
     }

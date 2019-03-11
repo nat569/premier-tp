@@ -363,70 +363,22 @@ ici  return \$this->render('alea/toto.html.twig', -->
 \t\t\t<section>
 \t\t\t<div class=\"sectionTitle\">
 \t\t\t\t<h1>Contacts</h1><br/>
-\t\t\t\t";
-        // line 197
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 198
-            echo "\t\t\t\t\t<a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_new");
-            echo "\" >New</a>
-\t\t\t\t";
-        }
-        // line 200
-        echo "\t\t\t</div>
+\t\t\t</div>
 \t\t\t<!--<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target =\"_blank\">Gerer les contacts</a>-->
 \t\t\t
 \t\t\t<div class=\"sectionContent\">
 \t\t\t    
 \t\t\t    <ul>
-\t            ";
-        // line 206
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["contacts"]) || array_key_exists("contacts", $context) ? $context["contacts"] : (function () { throw new Twig_Error_Runtime('Variable "contacts" does not exist.', 206, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["contact"]) {
-            // line 207
-            echo "\t                <li>
-\t\t\t            <article>
-\t\t\t            
-\t\t\t\t\t        <h2>";
-            // line 210
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contact"], "getName", [], "method"), "html", null, true);
-            echo "</h2>
-\t\t\t\t\t        <p>";
-            // line 211
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contact"], "getEmail", [], "method"), "html", null, true);
-            echo "</p>
-\t\t\t\t\t        <p>";
-            // line 212
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contact"], "getNumeroTelephone", [], "method"), "html", null, true);
-            echo "</p>
-\t\t\t\t\t        ";
-            // line 213
-            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 214
-                echo "\t\t\t\t\t\t\t\t<a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_show", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "getId", [], "method")]), "html", null, true);
-                echo "\" >show</a>
-\t\t\t\t\t\t\t\t<a href=\"";
-                // line 215
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "getId", [], "method")]), "html", null, true);
-                echo "\" >edit</a>
-\t\t\t\t\t\t\t\t<a href=\"";
-                // line 216
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "getId", [], "method")]), "html", null, true);
-                echo "\" >delete</a>
-\t\t\t\t\t\t\t";
-            }
-            // line 218
-            echo "\t\t\t\t\t\t\t
-\t\t\t\t        </article>
-\t                </li>
-\t            ";
+\t\t\t    \t";
+        // line 203
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 204
+            echo "\t\t\t\t\t<a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_new");
+            echo "\" >Laisser un message</a>
+\t\t\t\t";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contact'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 222
+        // line 206
         echo "\t\t\t     </ul>
 \t\t\t</div>
 \t\t\t<div class=\"clear\"></div>
@@ -444,11 +396,11 @@ ici  return \$this->render('alea/toto.html.twig', -->
 \t\t\t\t<ul class=\"keySkills\">
 \t\t\t\t    
 \t\t\t\t    ";
-        // line 238
+        // line 222
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(0, 7));
         foreach ($context['_seq'] as $context["_key"] => $context["iterateur"]) {
-            // line 239
+            // line 223
             echo "\t\t\t        <li>A Key Skill ";
             echo twig_escape_filter($this->env, $context["iterateur"], "html", null, true);
             echo " </li>
@@ -457,7 +409,7 @@ ici  return \$this->render('alea/toto.html.twig', -->
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['iterateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 241
+        // line 225
         echo "
 \t\t\t\t    <!--
 \t\t\t\t\t<li>A Key Skill</li>
@@ -529,7 +481,7 @@ pageTracker._trackPageview();
 
     public function getDebugInfo()
     {
-        return array (  461 => 241,  452 => 239,  448 => 238,  430 => 222,  421 => 218,  416 => 216,  412 => 215,  407 => 214,  405 => 213,  401 => 212,  397 => 211,  393 => 210,  388 => 207,  384 => 206,  376 => 200,  370 => 198,  368 => 197,  356 => 187,  348 => 184,  343 => 182,  338 => 181,  336 => 180,  332 => 179,  328 => 178,  324 => 177,  320 => 175,  316 => 174,  309 => 169,  303 => 167,  301 => 166,  290 => 157,  282 => 154,  277 => 152,  272 => 151,  270 => 150,  266 => 149,  262 => 148,  256 => 147,  252 => 146,  248 => 144,  244 => 143,  237 => 138,  231 => 136,  229 => 135,  216 => 124,  208 => 121,  203 => 119,  198 => 118,  196 => 117,  192 => 116,  186 => 115,  182 => 114,  178 => 112,  174 => 111,  168 => 107,  162 => 105,  160 => 104,  129 => 75,  117 => 69,  113 => 67,  109 => 66,  68 => 30,  62 => 29,  55 => 25,  41 => 14,  26 => 1,);
+        return array (  413 => 225,  404 => 223,  400 => 222,  382 => 206,  376 => 204,  374 => 203,  356 => 187,  348 => 184,  343 => 182,  338 => 181,  336 => 180,  332 => 179,  328 => 178,  324 => 177,  320 => 175,  316 => 174,  309 => 169,  303 => 167,  301 => 166,  290 => 157,  282 => 154,  277 => 152,  272 => 151,  270 => 150,  266 => 149,  262 => 148,  256 => 147,  252 => 146,  248 => 144,  244 => 143,  237 => 138,  231 => 136,  229 => 135,  216 => 124,  208 => 121,  203 => 119,  198 => 118,  196 => 117,  192 => 116,  186 => 115,  182 => 114,  178 => 112,  174 => 111,  168 => 107,  162 => 105,  160 => 104,  129 => 75,  117 => 69,  113 => 67,  109 => 66,  68 => 30,  62 => 29,  55 => 25,  41 => 14,  26 => 1,);
     }
 
     public function getSourceContext()
@@ -730,31 +682,15 @@ ici  return \$this->render('alea/toto.html.twig', -->
 \t\t\t<section>
 \t\t\t<div class=\"sectionTitle\">
 \t\t\t\t<h1>Contacts</h1><br/>
-\t\t\t\t{% if is_granted('ROLE_ADMIN') %}
-\t\t\t\t\t<a href=\"{{ path('contact_new') }}\" >New</a>
-\t\t\t\t{% endif %}
 \t\t\t</div>
 \t\t\t<!--<a href='https://tpsymphony-nat569.c9users.io/symfony/public/index.php/contact/' target =\"_blank\">Gerer les contacts</a>-->
 \t\t\t
 \t\t\t<div class=\"sectionContent\">
 \t\t\t    
 \t\t\t    <ul>
-\t            {% for contact in contacts %}
-\t                <li>
-\t\t\t            <article>
-\t\t\t            
-\t\t\t\t\t        <h2>{{ contact.getName () }}</h2>
-\t\t\t\t\t        <p>{{ contact.getEmail() }}</p>
-\t\t\t\t\t        <p>{{ contact.getNumeroTelephone()}}</p>
-\t\t\t\t\t        {% if is_granted('ROLE_ADMIN') %}
-\t\t\t\t\t\t\t\t<a href=\"{{ path('contact_show', {id:contact.getId()}) }}\" >show</a>
-\t\t\t\t\t\t\t\t<a href=\"{{ path('contact_edit', {id:contact.getId()}) }}\" >edit</a>
-\t\t\t\t\t\t\t\t<a href=\"{{ path('contact_delete', {id:contact.getId()}) }}\" >delete</a>
-\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t
-\t\t\t\t        </article>
-\t                </li>
-\t            {% endfor %}
+\t\t\t    \t{% if is_granted('ROLE_ADMIN') %}
+\t\t\t\t\t<a href=\"{{ path('contact_new') }}\" >Laisser un message</a>
+\t\t\t\t{% endif %}
 \t\t\t     </ul>
 \t\t\t</div>
 \t\t\t<div class=\"clear\"></div>

@@ -72,35 +72,21 @@ class __TwigTemplate_34a3f12bb675a93424fa57af55e9c5cbd3bb557b18be34ab99b705bc7b6
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new Twig_Error_Runtime('Variable "contact" does not exist.', 16, $this->source); })()), "name", []), "html", null, true);
         echo "</td>
             </tr>
-            <tr>
-                <th>Email</th>
-                <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new Twig_Error_Runtime('Variable "contact" does not exist.', 20, $this->source); })()), "email", []), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>NumeroTelephone</th>
-                <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new Twig_Error_Runtime('Variable "contact" does not exist.', 24, $this->source); })()), "numeroTelephone", []), "html", null, true);
-        echo "</td>
-            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 29
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 31
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new Twig_Error_Runtime('Variable "contact" does not exist.', 31, $this->source); })()), "id", [])]), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new Twig_Error_Runtime('Variable "contact" does not exist.', 23, $this->source); })()), "id", [])]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 33
+        // line 25
         echo twig_include($this->env, $context, "contact/_delete_form.html.twig");
         echo "
 ";
@@ -121,7 +107,7 @@ class __TwigTemplate_34a3f12bb675a93424fa57af55e9c5cbd3bb557b18be34ab99b705bc7b6
 
     public function getDebugInfo()
     {
-        return array (  104 => 33,  99 => 31,  94 => 29,  86 => 24,  79 => 20,  72 => 16,  65 => 12,  57 => 6,  51 => 5,  39 => 3,  15 => 1,);
+        return array (  90 => 25,  85 => 23,  80 => 21,  72 => 16,  65 => 12,  57 => 6,  51 => 5,  39 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -142,14 +128,6 @@ class __TwigTemplate_34a3f12bb675a93424fa57af55e9c5cbd3bb557b18be34ab99b705bc7b6
             <tr>
                 <th>Name</th>
                 <td>{{ contact.name }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ contact.email }}</td>
-            </tr>
-            <tr>
-                <th>NumeroTelephone</th>
-                <td>{{ contact.numeroTelephone }}</td>
             </tr>
         </tbody>
     </table>

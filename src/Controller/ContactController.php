@@ -39,7 +39,7 @@ class ContactController extends Controller
             $entityManager->persist($contact);
             $entityManager->flush();
 
-            return $this->redirectToRoute('contact_index');
+            return $this->redirectToRoute('app_lucky_number');
         }
 
         return $this->render('contact/new.html.twig', [
@@ -95,7 +95,7 @@ class ContactController extends Controller
                 $entityManager->remove($contact);
                 $entityManager->flush();
 
-                return $this->redirectToRoute('contact_index');
+                return $this->redirectToRoute('app_lucky_number');
             } else {
                 return new Response(
                     '<html><body>Lucky number: '.$number.'</body></html>'
