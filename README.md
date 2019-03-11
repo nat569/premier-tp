@@ -26,13 +26,15 @@ Ce projet est un CV en ligne personalisable.
 [Lien vers l'api](https://tpsymphony-nat569.c9users.io/symfony/public/index.php/api)
 
 Tests unitaires pour les accesseurs :
+
 ![screenshot](https://raw.githubusercontent.com/nat569/premier-tp/master/Test_unitaire.JPG)
 
 
 Test fonctionnel :
+
 ![screenshot](https://raw.githubusercontent.com/nat569/premier-tp/master/Test_acceptance.JPG)
 
-####Pour refaire ce projet vous aurez entre autre besoin d'installer:
+#### Pour refaire ce projet vous aurez entre autre besoin d'installer:
 * Symfony
 * [composer](wget https://getcomposer.org/download/1.6.2/composer.phar)
 * Le orm-pack et le maker-bundle -dev de symfony
