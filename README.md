@@ -6,7 +6,7 @@
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
     ----------------------------------------------------------------- 
 
-Ce projet est un CV en ligne personalisable. 
+Ce projet est un CV en ligne personnalisable. 
 
 
 
@@ -29,7 +29,7 @@ Tests unitaires pour les accesseurs :
 ![screenshot](https://raw.githubusercontent.com/nat569/premier-tp/master/Test_unitaire.JPG)
 
 
-Test fonctionnel :
+Test d acceptance :
 
 ![screenshot](https://raw.githubusercontent.com/nat569/premier-tp/master/Test_acceptance.JPG)
 
@@ -41,3 +41,6 @@ Test fonctionnel :
 * Php cs fixer
 * codeception
 
+Pour un rendu global de la css :
+
+![screenshot]
