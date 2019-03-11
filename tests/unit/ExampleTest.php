@@ -28,12 +28,10 @@ class ExampleTest extends \Codeception\Test\Unit
         $this->assertEmpty($entity->getId());
         
         $entity->setName('Michel');
-        $entity->setEmail('Michelatwanadoo.org');
-        $entity->setNumeroTelephone(36303630);
+        $entity->setMessage('Michelatwanadoo.org');
         
         $this->assertEquals('Michel', $entity->getName());
-        $this->assertEquals('Michelatwanadoo.org', $entity->getEmail());
-        $this->assertEquals(36303630, $entity->getNumeroTelephone());
+        $this->assertEquals('Michelatwanadoo.org', $entity->getMessage());
         
         
         $entity = new Experience (); 
