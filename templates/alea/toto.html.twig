@@ -200,10 +200,8 @@ ici  return $this->render('alea/toto.html.twig', -->
 			<div class="sectionContent">
 			    
 			    <ul>
-			    	{% if is_granted('ROLE_ADMIN') %}
 					<a href="{{ path('contact_new') }}" >Laisser un message</a>
-				{% endif %}
-			     </ul>
+			    </ul>
 			</div>
 			<div class="clear"></div>
 		</section>

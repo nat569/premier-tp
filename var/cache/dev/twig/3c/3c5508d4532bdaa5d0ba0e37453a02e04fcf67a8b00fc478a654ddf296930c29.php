@@ -369,17 +369,11 @@ ici  return \$this->render('alea/toto.html.twig', -->
 \t\t\t<div class=\"sectionContent\">
 \t\t\t    
 \t\t\t    <ul>
-\t\t\t    \t";
+\t\t\t\t\t<a href=\"";
         // line 203
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 204
-            echo "\t\t\t\t\t<a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_new");
-            echo "\" >Laisser un message</a>
-\t\t\t\t";
-        }
-        // line 206
-        echo "\t\t\t     </ul>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_new");
+        echo "\" >Laisser un message</a>
+\t\t\t    </ul>
 \t\t\t</div>
 \t\t\t<div class=\"clear\"></div>
 \t\t</section>
@@ -396,11 +390,11 @@ ici  return \$this->render('alea/toto.html.twig', -->
 \t\t\t\t<ul class=\"keySkills\">
 \t\t\t\t    
 \t\t\t\t    ";
-        // line 222
+        // line 220
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(0, 7));
         foreach ($context['_seq'] as $context["_key"] => $context["iterateur"]) {
-            // line 223
+            // line 221
             echo "\t\t\t        <li>A Key Skill ";
             echo twig_escape_filter($this->env, $context["iterateur"], "html", null, true);
             echo " </li>
@@ -409,7 +403,7 @@ ici  return \$this->render('alea/toto.html.twig', -->
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['iterateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 225
+        // line 223
         echo "
 \t\t\t\t    <!--
 \t\t\t\t\t<li>A Key Skill</li>
@@ -481,7 +475,7 @@ pageTracker._trackPageview();
 
     public function getDebugInfo()
     {
-        return array (  413 => 225,  404 => 223,  400 => 222,  382 => 206,  376 => 204,  374 => 203,  356 => 187,  348 => 184,  343 => 182,  338 => 181,  336 => 180,  332 => 179,  328 => 178,  324 => 177,  320 => 175,  316 => 174,  309 => 169,  303 => 167,  301 => 166,  290 => 157,  282 => 154,  277 => 152,  272 => 151,  270 => 150,  266 => 149,  262 => 148,  256 => 147,  252 => 146,  248 => 144,  244 => 143,  237 => 138,  231 => 136,  229 => 135,  216 => 124,  208 => 121,  203 => 119,  198 => 118,  196 => 117,  192 => 116,  186 => 115,  182 => 114,  178 => 112,  174 => 111,  168 => 107,  162 => 105,  160 => 104,  129 => 75,  117 => 69,  113 => 67,  109 => 66,  68 => 30,  62 => 29,  55 => 25,  41 => 14,  26 => 1,);
+        return array (  407 => 223,  398 => 221,  394 => 220,  374 => 203,  356 => 187,  348 => 184,  343 => 182,  338 => 181,  336 => 180,  332 => 179,  328 => 178,  324 => 177,  320 => 175,  316 => 174,  309 => 169,  303 => 167,  301 => 166,  290 => 157,  282 => 154,  277 => 152,  272 => 151,  270 => 150,  266 => 149,  262 => 148,  256 => 147,  252 => 146,  248 => 144,  244 => 143,  237 => 138,  231 => 136,  229 => 135,  216 => 124,  208 => 121,  203 => 119,  198 => 118,  196 => 117,  192 => 116,  186 => 115,  182 => 114,  178 => 112,  174 => 111,  168 => 107,  162 => 105,  160 => 104,  129 => 75,  117 => 69,  113 => 67,  109 => 66,  68 => 30,  62 => 29,  55 => 25,  41 => 14,  26 => 1,);
     }
 
     public function getSourceContext()
@@ -688,10 +682,8 @@ ici  return \$this->render('alea/toto.html.twig', -->
 \t\t\t<div class=\"sectionContent\">
 \t\t\t    
 \t\t\t    <ul>
-\t\t\t    \t{% if is_granted('ROLE_ADMIN') %}
 \t\t\t\t\t<a href=\"{{ path('contact_new') }}\" >Laisser un message</a>
-\t\t\t\t{% endif %}
-\t\t\t     </ul>
+\t\t\t    </ul>
 \t\t\t</div>
 \t\t\t<div class=\"clear\"></div>
 \t\t</section>
