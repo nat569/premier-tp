@@ -43,4 +43,4 @@ Test d acceptance :
 
 Pour un rendu global de la css :
 
-![screenshot]
+![screenshot](https://raw.githubusercontent.com/nat569/premier-tp/master/CV.JPG)
