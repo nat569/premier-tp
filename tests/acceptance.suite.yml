@@ -4,9 +4,14 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
-actor: AcceptanceTester
+class_name: AcceptanceTester
+#actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
             url: http://localhost:8000
         - \App\Tests\Helper\Acceptance
+        -WebDriver:
+            url: 'https://tpsymphony-nat569.c9users.io/symfony/public/index.php/toto' 
+            browser: firefox
+            
